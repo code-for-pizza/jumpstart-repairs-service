@@ -14,7 +14,7 @@ async function startApolloServer() {
     resolvers,
   });
 
-  server.listen().then(({url}) => {
+  server.listen({port: PORT}).then(({url}) => {
     console.log(
       `🚀 GraphQL-Server is running on ${url}`
     );
