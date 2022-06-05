@@ -9,6 +9,6 @@ RUN yarn install
 
 COPY . .
 
-EXPOSE 4000
+EXPOSE $PORT
 
 CMD ["yarn", "start"]
