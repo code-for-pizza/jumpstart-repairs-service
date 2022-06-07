@@ -29,24 +29,24 @@ describe('hello resolver', () => {
     expect(actualResult).toEqual(expectedResult);
   });
 
-  // it(`returns ${'name'} if name is provided, else return ${'Hello Keith'}`, async () => {
-  //   //step 1: arrange
-  //   const query = gql`
-  //     query Test {
-  //       hello { name: dex }
-  //     }
-  //   `;
+  it(`returns Hello ${'name'} if name is provided`, async () => {
+    //step 1: arrange
+    const query = gql`
+      query Test {
+        hello(name: "dex")
+      }
+    `;
 
-  //   const expectedResult = {
-  //     hello: 'Hello dex',
-  //   };
+    const expectedResult = {
+      hello: 'Hello dex',
+    };
 
-  //   // step 2: act
-  //   const { data } = await mockServer.executeOperation({
-  //     query,
-  //   });
+    // step 2: act
+    const { data } = await mockServer.executeOperation({
+      query,
+    });
 
-  //   //step 3: assert
-  //   expect(data).toEqual(expectedResult);
-  // });
+    //step 3: assert
+    expect(data).toEqual(expectedResult);
+  });
 });
