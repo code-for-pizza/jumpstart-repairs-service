@@ -1,11 +1,11 @@
-version: "3.8"
+version: '3.8'
 
 services:
-  service-staging:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    environment:
-      PORT: 3001
-    ports:
-      - 3001:3001 
+  test-ci:
+  image: node:14.17.5-alpine
+  command: sh -c "yarn install && yarn test --coverage"
+  working_dir: /app
+  volumes:
+    - ./:/app
+  ports:
+    - 3001:3001
