@@ -7,6 +7,9 @@ const resolvers = {
 
       return `Hello Keith`;
     },
+    haha: (_: undefined, { huhu }: { huhu: string }) => {
+      return huhu;
+    },
   },
 };
 
