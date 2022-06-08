@@ -13,7 +13,10 @@
   "scripts": {
     "start": "node src/server.js",
     "watch": "ts-node-dev -r tsconfig-paths/register src/server.ts",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint .",
+    "format-check": "prettier --check .",
+    "format": "prettier ."
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
